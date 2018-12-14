@@ -3,16 +3,16 @@
 ## Overview
 tl;dr: Some command line examples on how to use CVS API to programmatically create, modify, clone and delete CVS volumes.
 
-Longer: You need a shared POSIX filesystem in AWS or GCP? You need an fast and reliasble NFS or SMB/CIFS share? CVS is the solution. Lets assume you have put your workload (e.g. a database) on a CVS NFS share, what next? Create instant snapshots of your data for backup and recovery or clone your database for dev/test. Of course you want to automate this. Here is example code on how to use the API.
+Longer: You need a shared POSIX filesystem in AWS or GCP? You need a fast and reliable NFS or SMB/CIFS share? CVS is the solution. Lets assume you have put your workload (e.g. a database) on a CVS NFS share, what next? Create instant snapshots of your data for backup and recovery or clone your database for dev/test. Of course you want to automate this. Here is sample code on how to use the API.
 
 ## What is Cloud Volume Services (CVS)?
 Basically it is a NAS (NFS/SMB) share for your workloads running in AWS and GCP. It can do instant, space efficient snapshots and clone your volume in a snap ;) For more info, head to https://cloud.netapp.com/cloud-volumes-service.
 
 ## API stuff
-Here is the offical link to the API documentation:
+* Here is the offical link to the API documentation:
 https://docs.netapp.com/us-en/cloud_volumes/aws/reference_cloud_volume_apis.html
-The complete API documentation is here: https://app.swaggerhub.com/apis/NetApp-Cloud/c-vaa_s
-I recommend using the "API documentation" link from the CVS UI. It will guide you to version of API ducumentation your environment is using.
+* The complete API documentation is here: https://app.swaggerhub.com/apis/NetApp-Cloud/c-vaa_s
+* I recommend using the "API documentation" link from the CVS UI. It will guide you to the API documentation that your environment is using.
 
 ## How to use?
 1. Obtain access to CVS. See https://cloud.netapp.com/cloud-volumes-service for details.

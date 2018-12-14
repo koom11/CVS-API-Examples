@@ -27,7 +27,7 @@ fsid=$(echo $newvol | jq -r .fileSystemId)
 state="x"
 until [ "$state" == "available" ]; do
 echo -n "."
-sleep 2
+sleep 5
 state=$(curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:$CVS_ACCESS_KEY_ID -H secret-key:$CVS_SECRET_ACCESS_KEY \
  -X GET ${CVS_API_URL}FileSystems/${fsid} | jq -r '.lifeCycleState')
 done
@@ -51,7 +51,7 @@ curl -s -H accept:application/json -H "Content-type: application/json" -H api-ke
 
 # TODO: Update SLA level or Quota
 
-# ToDo: Create clone
+# TODO: Create clone
 
 # Cleanup
 
